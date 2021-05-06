@@ -1,0 +1,720 @@
+body {
+    font-family: 'Rubik', sans-serif;
+    padding-top: 80px;
+    background-color: #f5f5f5;
+}
+
+.navigation {
+    background-color: #343a40;
+    display: flex;
+    padding: 0 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    /*zorgt ervoor dat de balk over de rest getekend wordt*/
+}
+
+.navigation>img {
+    height: 80px;
+    padding: 10px;
+    padding-right: 30px;
+}
+
+.navigation>ul {
+    display: flex;
+    list-style: none;
+    flex: 1;
+    justify-content: space-evenly;
+}
+
+.navigation>ul>li {
+    flex: 1;
+}
+
+.navigation .nav-item {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+}
+
+.navigation a.nav-item {
+    color: azure;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+    transition-property: color, background-color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    background-color: #343a40;
+    height: 80px;
+}
+
+.navigation a.nav-item:hover {
+    cursor: pointer;
+    color: #0ba8b6;
+    background-color: azure;
+}
+
+.navigation li {
+    position: relative;
+}
+
+.navigation li .dropdown {
+    list-style: none;
+    display: none;
+    position: absolute;
+    width: 100%;
+}
+
+.navigation li:hover .dropdown {
+    display: unset;
+}
+
+.navigation .nav-item input {
+    color: #343a40;
+    padding: 8px 15px;
+    font-size: 20px;
+    width: 60%;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    transition-property: background-color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+
+.navigation .nav-item input:hover {
+    background-color: azure;
+}
+
+.home-picture {
+    height: 500px;
+    width: 100%;
+    border: none;
+    background: url(images/design.png) no-repeat center bottom, url(images/home.jpg) no-repeat center;
+    background-size: contain, cover;
+    margin-bottom: 370px;
+}
+
+.home-picture .headlines {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0px 2px 4px #00000049;
+    color: azure;
+    padding-top: 70px;
+}
+
+.headlines>h1 {
+    font-size: 40px;
+    padding-bottom: 20px;
+}
+
+.headlines>p {
+    font-size: 22px;
+}
+
+.width {
+    width: 100%;
+    max-width: 1130px;
+    margin: auto;
+}
+
+/* .animals komt na .width en overschijdt hierdoor margin-top*/
+
+.animals {
+    display: flex;
+    margin-top: 150px;
+    justify-content: center;
+    color: #343a40;
+}
+
+.animals .animal .text>h1 {
+    font-weight: bold;
+    padding-bottom: 30px;
+}
+
+.animals .animal .text>p {
+    margin-bottom: 50px;
+}
+
+.animals .animal {
+    height: 559px;
+    width: 350px;
+    box-shadow: 0px 4px 6px #00000049;
+    margin: 0 20px;
+    border-radius: 40px;
+    overflow: hidden;
+}
+
+.animals .animal:first-child {
+    margin-left: 0;
+}
+
+.animals .animal:last-child {
+    margin-right: 0;
+}
+
+.animals .animal:hover {
+    cursor: pointer;
+}
+
+.animals .animal .picture img {
+    height: 50%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.animals .animal .text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    flex-direction: column;
+}
+
+.button {
+    color: azure;
+    background-color: #0ba8b6;
+    padding: 14px 26px;
+    text-shadow: 0px 2px 4px #00000049;
+    box-shadow: 0px 2px 3px #00000049;
+    border-radius: 15px;
+    text-decoration: none;
+    display: block;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    transition-property: background-color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+
+.button:hover {
+    background-color: #0CC3D4;
+    cursor: pointer;
+}
+
+.button.light {
+    color: #0ba8b6;
+    background-color: azure;
+    text-shadow: none;
+}
+
+.button.light:hover {
+    background-color: #e2f5f5;
+}
+
+.part2 {
+    display: flex;
+    justify-content: center;
+}
+
+.part2 .text2 {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 100px 0;
+}
+
+.part2 .img {
+    display: flex;
+    width: 40%;
+    background: url(images/bruinehond.png) no-repeat;
+    background-size: contain;
+    background-position: right;
+}
+
+.part2 .text2>h1 {
+    font-size: 45px;
+    color: #343a40;
+    padding-bottom: 40px;
+}
+
+.part2 .text2>p {
+    font-size: 24px;
+    color: #343a40;
+    padding-bottom: 40px;
+    line-height: 1.5;
+}
+
+.info {
+    color: #b7c317;
+    text-decoration: none;
+    font-size: 26px;
+    font-weight: bold;
+    border: solid 2px #b7c317;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    transition-property: background-color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+
+.info:hover {
+    cursor: pointer;
+    color: azure;
+    background-color: #b7c317;
+}
+
+.part3 {
+    background: url(images/shelter.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0 100px 200px;
+    margin-bottom: 70px;
+}
+
+.square {
+    width: 500px;
+    background-color: #0ba8b6;
+    color: azure;
+    padding: 40px;
+    border-radius: 30px;
+}
+
+.square>a {
+    margin-bottom: 15px;
+}
+
+.square>a:last-child {
+    margin-bottom: 0;
+}
+
+.square>h1 {
+    font-size: 45px;
+    padding-bottom: 30px;
+    text-shadow: 0px 2px 4px #00000049;
+}
+
+.square>p {
+    font-size: 22px;
+    text-shadow: 0px 2px 4px #00000049;
+    line-height: 1.3;
+    padding-bottom: 30px;
+}
+
+.part4 {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 70px;
+}
+
+.part4 .button {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.donate {
+    font-size: 38px;
+}
+
+.footer {
+    background-color: #343a40;
+    display: flex;
+    padding: 0 30px;
+    padding-top: 70px;
+    padding-bottom: 30px;
+    color: azure;
+}
+
+.footer .width {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .width div {
+    display: flex;
+}
+
+.socialmedia {
+    width: 25px;
+    height: 25px;
+    color: azure;
+    margin: 0 2px;
+    transition-property: color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+
+.socialmedia:hover {
+    color: #b7c317;
+}
+
+/**
+=======================================
+=       NIEUWS & OVERIGE PAGINA       =
+=======================================
+**/
+
+.overig-picture {
+    height: 350px;
+    width: 100%;
+    border: none;
+    background: url(images/layout.png) no-repeat center bottom, url(images/cover.jpg) no-repeat center;
+    background-size: 100% 130px, cover;
+    margin-bottom: -30px;
+}
+
+.header {
+    background-color: #0ba8b6;
+    box-shadow: inset 0 -3px 0px rgba(0, 0, 0, 0.2);
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.header>h1 {
+    color: azure;
+    text-shadow: 0px 4px 8px #00000049;
+    padding-bottom: 20px;
+}
+
+.pointer {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-top: -20px;
+    background: #0ba8b6;
+    box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.2);
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pointer img {
+    height: 35px;
+    width: 35px;
+    margin-top: 5px;
+}
+
+.content-nieuws .story {
+    text-decoration: none;
+    font-size: 18px;
+    color: #000000d0;
+}
+
+.content-nieuws .story {
+    border-bottom: 1px black dotted;
+    display: block;
+    padding: 30px 0;
+    transition-property: color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+
+.content-nieuws .story:hover {
+    color: #0ba8b6cb;
+}
+
+.content-nieuws .story.nohover {
+    color: #000000d0;
+    border-bottom: none;
+}
+
+.content-nieuws .story:last-child {
+    border-bottom: none;
+    padding-bottom: 50px;
+}
+
+.content-nieuws h1 {
+    margin-bottom: 20px 0;
+    font-size: 20px;
+}
+
+.content-nieuws .date {
+    font-size: 14px;
+}
+
+.content-nieuws p {
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+/**
+=======================================
+=       Over-ons & OVERIGE PAGINA       =
+=======================================
+**/
+
+.about {
+    padding-top: 20px;
+}
+
+.about p {
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.about p:last-child {
+    padding-bottom: 50px;
+}
+
+.about .disclaimer {
+    margin-bottom: 0;
+}
+
+.mainlinks {
+    color: #0ba8b6cb;
+    transition-property: color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    text-decoration: none;
+}
+
+.mainlinks:hover {
+    color: #b7c317;
+}
+
+/**
+=======================================
+=       Contact & OVERIGE PAGINA       =
+=======================================
+**/
+
+.contact {
+    padding: 50px 0;
+}
+
+.contact p {
+    margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.card {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 40px;
+    margin-bottom: 50px;
+}
+
+.card span {
+    color: rgb(165, 27, 27);
+}
+
+.card .labels {
+    background: #f5f5f5;
+    padding: 30px 20px;
+    margin: 10px 0;
+    border-radius: 20px;
+}
+
+.card label {
+    padding-bottom: 2px;
+}
+
+.input input, .input textarea, .input select {
+    text-decoration: none;
+    font-size: 18px;
+    border: solid 1px #00000049;
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    transition-property: border-color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    resize: vertical;
+    outline: none;
+}
+
+.input textarea:focus, .input input:focus, .input select:focus {
+    border-color: #0ba8b6cb;
+}
+
+.input textarea {
+    min-height: 100px;
+}
+
+.input input:hover, .input textarea:hover, .input select:hover {
+    border-color: #0ba8b6cb;
+}
+
+.input select option:hover {
+    background-color: #0ba8b6cb;
+    cursor: pointer;
+}
+
+/**
+=======================================
+=       DIEREN      =
+=======================================
+**/
+
+.header2 {
+    background-color: #0ba8b6;
+    box-shadow: inset 0 -3px 0px rgba(0, 0, 0, 0.2);
+    position: relative;
+    margin-bottom: 50px;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header2 a {
+    margin: 0 80px;
+    color: #00000049;
+    text-decoration: none;
+    font-size: 26px;
+    transition-property: color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+
+.header2 .cat, .header2 .dog, .header2 .others {
+    color: rgba(255, 255, 255, 0.774);
+}
+
+.header2 a:hover {
+    color: rgba(255, 255, 255, 0.384);
+}
+
+.card2 {
+    background: #e9e7e7;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.card2 .labels {
+    margin: 0 15px;
+}
+
+.card2 .row {
+    display: flex;
+    flex-direction: row;
+}
+
+.selection {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #000000d0;
+}
+
+.photo {
+    display: flex;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.photo .mainphoto {
+    width: 340px;
+    height: 360px;
+    display: flex;
+    background-position: center;
+    background-size: cover;
+    margin: 50px 18px;
+    border-radius: 20px;
+    transition-property: box-shadow;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    flex-direction: column;
+    position: relative;
+    background-color: #f5f5f5;
+}
+
+.photo .mainphoto:hover {
+    box-shadow: #b7c317 0 0 0 4px;
+}
+
+.photo .mainphoto .rectangle {
+    height: 80px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 40px;
+    display: flex;
+    text-decoration: none;
+    color: azure;
+    font-size: 30px;
+    text-shadow: rgba(0, 0, 0, 0.699) 2px 2px 4px
+}
+
+.photo .mainphoto .logo {
+    background-color: #0ba8b663;
+    height: 80px;
+    width: 80px;
+    transition-property: background-color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.photo .mainphoto .logo.cats {
+    background-image: url(images/paw.png);
+    background-size: 50px;
+}
+
+.photo .mainphoto .logo.dogs {
+    background-image: url(images/dogpaw.png);
+    background-size: 40px;
+}
+
+.photo .mainphoto .logo.others {
+    background-image: url(images/others.png);
+    background-size: 30px;
+}
+
+.photo .mainphoto .space {
+    background-color: rgba(255, 255, 255, 0.301);
+    flex: 1;
+    transition-property: background-color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    padding: 10px 20px;
+}
+
+.photo .mainphoto:hover .logo {
+    background-color: #0ba8b6;
+}
+
+.photo .mainphoto:hover .space {
+    background-color: #0ba8b6;
+}
+
+.talk {
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+
+.goback {
+    color: #00000049;
+    padding: 14px 20px;
+     
+    border: 1px solid #c7c7c7;
+    border-radius: 15px;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    align-self: center;
+    transition-property: background-color, color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    margin-top: 30px;
+
+}
+
+.goback:hover {
+    background-color: #c7c7c7;
+    cursor: pointer;
+    color: azure;
+}
+
+.intro {display: flex;}
